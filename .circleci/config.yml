@@ -1,0 +1,10 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      # this image does not come with git nor ssh installed
+      # so it will rely on CircleCI agent's git and ssh to checkout code (git+ssh protocol required)
+      - image: nixos/nix:2.3.12
+    steps:
+      - checkout
