@@ -7,5 +7,5 @@ jobs:
       # so it will rely on CircleCI agent's git and ssh to checkout code (git+ssh protocol required)
       - image: nixos/nix:2.3.12
     steps:
-      - run: nix-env -i git
+      - run: nix-env -i openssh
       - checkout
